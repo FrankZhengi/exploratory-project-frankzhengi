@@ -1,1 +1,1 @@
-# exploratory-project-frankzhengi
+# exploratory-project
