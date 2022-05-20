@@ -1,4 +1,5 @@
 library(ggplot2)
+library(dplyr)
 
 us_all_gas_df <- read.csv("Data/PET_PRI_GND_DCUS_NUS_W.csv")
 us_city_avg_df <- read.csv("Data/SeriesReport-20220502011320_1a7c5d.csv", skip = 6)
