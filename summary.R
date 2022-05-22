@@ -2,9 +2,11 @@
 library(tidyverse)
 
 # Reading the data
-gas_prices <- read.csv('data/API_EP.PMP.SGAS.CD_DS2_en_csv_v2_4028724.csv', skip = 4)
+gas_prices <- read.csv('data/gasPrices91_16.csv', skip = 4)
+
 us_city <- read.csv('data/SeriesReport-20220502011320_1a7c5d.csv', skip = 6)
-gas_feat <- read.csv('data/Metadata_Country_API_EP.PMP.SGAS.CD_DS2_en_csv_v2_4028724.csv')
+gas_feat <- read.csv('data/Metadata_county.csv')
+
 gas_feat <- subset(gas_feat, select = -X)
 
 
