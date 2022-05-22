@@ -1,4 +1,4 @@
-# Exploratory Analysis on Drug Use
+# Exploratory Analysis on Gasoline Prices
 
 ## Overview
-We have decided to analyze drug use in the United States. Concerned with the drug use throughout the United States, we wanted to examine ages susceptible to drugs and amount of drug use in certain areas. For the drugs available in the dataset, we have a collection of annual average drug use in the past month or year from 2015 to 2016. Looking through the dataset, the data is sorted by age groups and states for drugs such as alcohol, cocaine, etc. 
+We have decided to analyze gasoline prices in the U.S. city as well as world wide. For the dataset on gasoline prices in the city the units are in gallon. As for the worldwide data, the units are price in USD per liter.
