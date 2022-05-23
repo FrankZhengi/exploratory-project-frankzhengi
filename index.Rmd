@@ -35,7 +35,7 @@ We have created this table to examine the differences in average gas prices per 
 
 ## Chart 1
 ```{r}
-
+Jan_gasincrease
 ```
 ## Chart 2
 ```{r}
