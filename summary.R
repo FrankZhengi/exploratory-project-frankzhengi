@@ -2,11 +2,9 @@
 library(tidyverse)
 
 # Reading the data
-gas_prices <- read.csv('data/gasPrices91_16.csv', skip = 4)
-
-us_city <- read.csv('data/SeriesReport-20220502011320_1a7c5d.csv', skip = 6)
+gas_prices <- read.csv('data/gasprice91_16.csv', skip = 4)
+us_city <- read.csv('data/usReport.csv', skip = 6)
 gas_feat <- read.csv('data/Metadata_county.csv')
-
 gas_feat <- subset(gas_feat, select = -X)
 
 
@@ -32,8 +30,11 @@ summary_info$year_highest <- us_city %>%
 
 
 # high income value gas price
-summary_info$HIC_val <- gas_prices %>% 
-  filter(Country.Code == 'HIC') %>% 
+summary_info$HIC_val <- gas_feat %>% 
+  left_join(gas_prices) %>% 
+  group_by(IncomeGroup) %>% 
+  summarize(X2016 = mean(X2016, na.rm = T)) %>% 
+  filter(IncomeGroup == 'High income') %>% 
   pull(X2016)
 
 

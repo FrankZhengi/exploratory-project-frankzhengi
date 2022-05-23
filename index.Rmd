@@ -19,15 +19,15 @@ library("knitr")
 
 # Introduction
 
+For our Exploratory assignment, we have decided to look at U.S. city gasoline prices and global gas prices to learn more about our data set. To look further into countries like the U.S., we chose to look more into high income countries to figure our the gas prices in this selected group.
 
 ## Summary Information
+
+From our data set on worldwide gas prices USD per liter, we have found it is `summary_info$avg_gas` per liter. The value for high income price to be `summary_info$HIC_val` per liter. The number of countries we found to be above the high income price was `summary_info$num_country` countries. In the U.S., the year for the highest city gasoline price USD per gallon average was `summary_info$year_highest` and the price was `highest_city_price`.
 
 
 ## Chart 1
 
-
 ## Chart 2
 
-
 ## Chart 3
-
