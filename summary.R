@@ -33,10 +33,14 @@ summary_info$year_highest <- us_city %>%
 
 
 # high income value gas price
-summary_info$HIC_val <- gas_prices %>% 
-  filter(Country.Code == 'HIC') %>% 
+summary_info$HIC_val <- gas_feat %>% 
+  left_join(gas_prices) %>% 
+  group_by(IncomeGroup) %>% 
+  summarize(X2016 = mean(X2016, na.rm = T)) %>% 
+  filter(IncomeGroup == 'High income') %>% 
   pull(X2016)
 
+summary_info$HIC_val <- round(summary_info$HIC_val, digits = 2)
 
 # number of countries that are high income with gas above the 
 # high income value
