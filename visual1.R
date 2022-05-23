@@ -1,8 +1,8 @@
-library(ggplot2)
+library(tidyr)
 library(dplyr)
-library(cowplot)
-
-
+library(stringr)
+library(ggplot2)
+library(ggrepel)
 
 
 
@@ -12,6 +12,17 @@ gasData <- read.csv('data/gasprice91_16.csv', skip = 4)
 
 names(gasData) = gsub(pattern = "X", replacement = "", x = names(gasData))
 
+
+
+
+
+
+
+
+
+
+# years <- gasData%>% 
+#   select(36:66)
 
 df_column1 <- gasData %>%
   pivot_longer(
@@ -30,16 +41,16 @@ df_duration <- gasData %>%
   )%>%
   filter(grepl('Duration', names))
 
-plotCol1 <- ggplot(df_column1, aes(x = factor(names), y = values)) + 
+plotCol1 <- ggplot(df_column1, aes(x = factor(years), y = values)) + 
   geom_bar(stat = "identity") + 
   xlab("Year") +
   ylab("Price")+
   #facet_wrap(~Group)+
   theme_bw()
 
-plot_Year <- ggplot(df_duration, aes(x=factor(names), y = values)) + 
+plot_Year <- ggplot(df_duration, aes(x=factor(years), y = values)) + 
   geom_bar(stat = "identity")+
-  xlab("Country") +
+  xlab("Year") +
   ylab("Price") +
   #facet_wrap(~Group) + 
   theme_bw()
@@ -54,7 +65,11 @@ plot_grid(plotCol1, plot_Year, labels = "AUTO")
   
 
 
-gasData[,5:66] <- sapply(gasData[,5:66], as.numeric)
+
+
+
+# Don't know if this is necessary, someone double check with me here 
+#gasData[,5:66] <- sapply(gasData[,5:66], as.numeric)
 
 
 
