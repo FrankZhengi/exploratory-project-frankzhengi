@@ -1,0 +1,33 @@
+---
+title: "Gas Prices Report"
+author: "Ryan Nguyen, Frank Zheng, James Bang, Hansol Choi"
+date: '2022-05-22'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+source("summary.R")
+source("table.R")
+source("visual1.R")
+source("visual2.R")
+source("visual3.R")
+
+library("knitr")
+```
+
+# Introduction
+
+
+## Summary Information
+
+
+## Chart 1
+
+
+## Chart 2
+
+
+## Chart 3
+
