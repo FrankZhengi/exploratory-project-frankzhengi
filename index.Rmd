@@ -37,16 +37,20 @@ We have created this table to examine the differences in average gas prices per 
 ```{r}
 Jan_gasincrease
 ```
+
 This chart is intended to show the trend of gasoline prices in January. A notable observation we found was that the general trend of the dots were going up in price.
+
 ## Chart 2
 ```{r}
 us_city_plot
 ```
 
 This chart is intended to show the price of gasoline during Janurary. The notable observation we found in this graph was a dip around 2015 and 2016.
+
 ## Chart 3
 ```{r}
 us_avg_year_gas
 ```
+
 This chart was intended to show the trend of gas pricing over several years. What we can see from the line chart is a general trend of increase of gas pricing, with a large spike around 2010, dipping down before spiking even higher at the most recent date. The current point of gas prices seen from this line chart is the highest pricing that unleaded regular gasoline has ever been.
 
