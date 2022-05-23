@@ -40,6 +40,7 @@ summary_info$HIC_val <- gas_feat %>%
   filter(IncomeGroup == 'High income') %>% 
   pull(X2016)
 
+summary_info$HIC_val <- round(summary_info$HIC_val, digits = 2)
 
 # number of countries that are high income with gas above the 
 # high income value
